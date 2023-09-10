@@ -61,7 +61,7 @@ Click anywhere on the map triggers the “Add new vehicle” form which has lati
 
 Click to edit a vehicle shows the same form as for adding new vehicles except that form title should be “Edit vehicle”.
 
-## Deleting Vehicles
+### Deleting Vehicles
 
 Click to delete a vehicle first shows native confirmation dialog and removes vehicle from the sidebar list and the map.
 
