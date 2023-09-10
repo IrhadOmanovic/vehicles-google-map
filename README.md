@@ -33,17 +33,15 @@ Implement managing fleet of vehicles according to Figma design and provided Rest
 
 ### Design
 
-[https://www.figma.com/file/394N4OjrF81IxCIjRq1hBC/Map-%26-Vehicles?node-id=0%3A1](Design)
+[Design](https://www.figma.com/file/394N4OjrF81IxCIjRq1hBC/Map-%26-Vehicles?node-id=0%3A1)
 
 ### API Endpoints
 
-Import in Insomnia
-[https://drive.google.com/file/d/1PtHhkAB6rX1nyC9CXFDTCHBlFNYc5o5n/view?usp=sharing](link)
+Import [this](https://drive.google.com/file/d/1PtHhkAB6rX1nyC9CXFDTCHBlFNYc5o5n/view?usp=sharing) doc in [Insomnia](https://insomnia.rest/pricing)
 
 ### Google Maps
 
-Developer guide:
-[https://developers.google.com/maps/documentation/javascript/adding-a-google-map](link)
+[Developer guide](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
 
 API key \*\*\*
 
