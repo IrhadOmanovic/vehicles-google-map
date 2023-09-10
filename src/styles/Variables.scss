@@ -1,0 +1,24 @@
+$primary : #000000;
+$secondary: #ffffff;
+
+$gray-400: #D9D9D9;
+
+$blue-200: #0047FF;
+$blue-400: #0E4DA4;
+
+
+@mixin standardText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin largeText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}

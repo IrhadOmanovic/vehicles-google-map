@@ -1,0 +1,21 @@
+@import '../../styles/Variables.scss';
+
+.checkbox {
+  margin-right: 1rem;
+  width: 16px;
+  height: 16px;
+  margin: 11px 26px 11px 12px;
+  border: 1px solid $primary;
+  border-radius: 2px;
+}
+
+.checkboxIcon {
+  margin-right: 1rem;
+}
+
+.label {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  @include standardText;
+}

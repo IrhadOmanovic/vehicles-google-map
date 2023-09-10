@@ -1,0 +1,12 @@
+@import '../../styles/Variables.scss';
+
+.button {
+  @include largeText;
+  padding: 0.5rem 0rem;
+  width: 170px;
+  text-align: center;
+  background-color: $blue-200;
+  color: $secondary;
+  border: none;
+  border-radius: 5px;
+}

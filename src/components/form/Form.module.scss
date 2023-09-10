@@ -1,0 +1,64 @@
+@import '../../styles/Variables.scss';
+
+.form {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary;
+  width: 627px;
+  height: 555px;
+  padding: 27px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.formContainer {
+  z-index: 1000;
+  height: 100vh;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  position: absolute;
+}
+
+.headline {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  height: 44px;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  flex: 1 0 'min-content';
+}
+
+.close {
+  flex: 1 0 'min-content';
+  margin: 16px 0 48px;
+}
+
+.latLenContainer {
+  display: flex !important;
+}
+
+.label {
+  flex: 1 0 34%;
+  margin-right: 49px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.button {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
