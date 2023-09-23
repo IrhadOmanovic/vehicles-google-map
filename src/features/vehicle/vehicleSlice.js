@@ -5,11 +5,13 @@ import {
   editVehicle as editVehicleAPI,
   deleteVehicle as deleteVehicleAPI,
   fetchEnabledVehicles as fetchEnabledVehiclesAPI,
+  fetchSingleVehicle as fetchSingleVehicleAPI,
 } from './vehicleAPI';
 
 const initialState = {
   error: null,
   vehicles : [],
+  vehicle : {},
   enabledVehicles: [],
   status: 'idle',
 };
@@ -64,6 +66,15 @@ export const deleteVehicle = createAsyncThunk(
   'vehicles/deleteVehicle',
   async (id) => {
     const response = await deleteVehicleAPI(id);
+    // The value we return becomes the `fulfilled` action payload
+    return response;
+  }
+);
+
+export const fetchSingleVehicle = createAsyncThunk(
+  'vehicles/fetchSingleVehicle',
+  async (id) => {
+    const response = await fetchSingleVehicleAPI(id);
     // The value we return becomes the `fulfilled` action payload
     return response;
   }
@@ -126,7 +137,7 @@ export const vehicleSlice = createSlice({
             state.enabledVehicles.splice(enabledVehicleIndex, 1)
           } if(enabled && enabledVehicleIndex === -1) { //From hidden to visible
             state.enabledVehicles.push(action.payload.vehicle)
-          } else {
+          } else if (enabledVehicleIndex !== -1) {
             // Vehicle was visible and remains visible
             state.enabledVehicles[enabledVehicleIndex] = action.payload.vehicle;
           }
@@ -156,7 +167,17 @@ export const vehicleSlice = createSlice({
         state.vehicles = newVehiclesArray;
         state.enabledVehicles = newEnabledVehiclesArray;
         state.error = action.payload.error
-      });;
+      })
+      .addCase(fetchSingleVehicle.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchSingleVehicle.fulfilled, (state, action) => {
+        state.status = 'idle';
+        if(!action.payload.error) {
+          state.vehicle = action.payload.vehicle;
+        }
+        state.error = action.payload.error
+      });
   },
 });
 
@@ -167,6 +188,9 @@ export const vehicleSlice = createSlice({
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectVehicles = (state) => state.vehicles.vehicles;
 export const selectEnabledVehicles = (state) => state.vehicles.enabledVehicles;
+export const selectVehicle = (state) => state.vehicles.vehicle;
+export const selectStatus = (state) => state.vehicles.status;
+
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.

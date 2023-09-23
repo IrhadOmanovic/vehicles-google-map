@@ -50,3 +50,13 @@ export const deleteVehicle = async (id) => {
     return { error }
   }
 }
+
+export const fetchSingleVehicle = async (id) => {
+  try {
+    const response = await axiosInstance.get(`/vehicles/${id}`)
+
+    return { error : null, vehicle : response.data, id }
+  } catch (error) {
+    return { error }
+  }
+}

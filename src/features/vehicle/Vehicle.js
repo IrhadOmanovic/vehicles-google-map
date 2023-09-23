@@ -125,7 +125,9 @@ export function Vehicle() {
               return (
                 <MarkerF
                   draggable
-                  label={labelOptions}
+                  options={{
+                    label : labelOptions
+                  }}
                   onDragEnd={onDragEnd}
                   visible={vehicle.enabled}
                   key={vehicle.id}

@@ -6,7 +6,7 @@ import Input from "../input"
 import Checkbox from "../checkbox"
 import Button from "../button"
 import Close from "../icons/Close"
-import { floatNumberRegex } from "../../lib/utils/regex"
+// import { floatNumberRegex } from "../../lib/utils/regex"
 
 const Form =({
   headline,
@@ -20,8 +20,8 @@ const Form =({
 }) => {
   const [model, setModel] = useState(initModel)
   const [reg_id, setRegistration] = useState(initRegistration)
-  const [lat, setLat] = useState(initLat)
-  const [lon, setLon] = useState(initLon)
+  const [lat, setLat] = useState(Number(initLat))
+  const [lon, setLon] = useState(Number(initLon))
   const [enabled, setEnabled] = useState(initEnabled)
 
   const handleOnSubmit = (e) => {
@@ -35,12 +35,12 @@ const Form =({
 
   const handleLatOnChange = (e) => {
     const value = e.target.value
-    value && (floatNumberRegex.test(value) || value === '') && setLat(value)
+    setLat(value)
   }
 
   const handleLngOnChange = (e) => {
     const value = e.target.value
-    value && (floatNumberRegex.test(value) || value === '') && setLon(value)
+    setLon(value)
   }
 
   const handleRegistrationOnChange = (e) => {

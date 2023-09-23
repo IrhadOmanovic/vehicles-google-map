@@ -2,12 +2,16 @@ import React from 'react';
 
 import './App.css';
 import { Vehicle } from './features/vehicle/Vehicle';
+import { Route, Routes } from 'react-router-dom';
+import VehiclePage from './features/vehicle/VehiclePage';
 
 function App() {
-  console.log(process.env)
   return (
     <div className="App">
-        <Vehicle />
+      <Routes> 
+        <Route path="/vehicle/:id" element={<VehiclePage /> } exact /> 
+        <Route path="/" element={<Vehicle /> } exact/> 
+      </Routes> 
     </div>
   );
 }
