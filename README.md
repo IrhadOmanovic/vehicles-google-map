@@ -17,6 +17,7 @@ This App is about providing user with wint interface to manipulate with vehicles
   - [Editing Vehicles](#editing-vehicles)
   - [Deleting Vehicles](#deleting-vehicles)
   - [Hiding Vehicles](#hiding-vehicles)
+  - [Vehicle Page](#vehicle-vehicles)
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
   - [yarn start](#yarn-start)
@@ -68,6 +69,10 @@ Click to delete a vehicle first shows native confirmation dialog and removes veh
 ### Hiding Vehicles
 
 Hiding vehicle removes vehicle from the map but leaves it in the sidebar list with name grayed out.
+
+### Vehicle Page
+
+Create simple vehicle page with vehicle information, and map with a pin location on it
 
 ## Getting Started
 
