@@ -17,7 +17,7 @@ This App is about providing user with wint interface to manipulate with vehicles
   - [Editing Vehicles](#editing-vehicles)
   - [Deleting Vehicles](#deleting-vehicles)
   - [Hiding Vehicles](#hiding-vehicles)
-  - [Vehicle Page](#vehicle-vehicles)
+  - [Vehicle Page](#vehicle-page)
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
   - [yarn start](#yarn-start)
